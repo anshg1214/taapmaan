@@ -1,5 +1,7 @@
 const express = require("express");
 const axios = require("axios");
+const path = require('path')
+
 
 const { getLocation } = require("./api/location.js");
 const { getWeather } = require("./api/weather.js");
@@ -12,6 +14,8 @@ app.listen(process.env.PORT || 3000, () => {
 
 
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
@@ -47,12 +51,12 @@ app.post("/locationsuggestion", async (req, res) => {
     return res.send(result);
 
 });
-
+const API_KEY = "5a5eacd3783a1ae3219045fedf1f3da8"
 app.post('/weatherinfo', async (req, res) => {
     const elem = req.body;
     const lat = elem.lattitude;
     const lon = elem.longitude;
-    const weatherdata = await getWeather(lat, lon);
+    const weatherdata = await getWeather(lat, lon, API_KEY);
     const data = weatherdata.data;
     return res.send(data);
 });
