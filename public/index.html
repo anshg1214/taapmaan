@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="style.css">
-    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <title>Taapmaan</title>
 
+    <meta name="title" content = "Taapmaan">
+    <meta name="description" content="Request Weather Information of any location">
+    <meta name="keywords" content="Taapmaan, weather, weather info, Ansh, Goyal, Ansh Goyal">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="English">
+    <meta name="author" content="Ansh Goyal">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- External fonts and links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/b512533c2e.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images//faviconfavicon-16x16.png">
@@ -19,12 +34,6 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="./images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">    
-
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-
-    <title>Taapmaan</title>
 
 </head>
 <body>
@@ -139,9 +148,9 @@
             <div class="forecast-content">
                 <div class= "fivedays" id="dayone">
                     <p><span>Today</span></p>
-                    <img  id = "dayoneimg" src="./images/icons/sunny.png" alt="">
+                    <img  id = "dayoneimg" src="./images/icons/sunny.webp" alt="">
 
-                    <p class="description" id="dayonedesc"></p>
+                    <p class="description" id="dayonedesc">broken clouds</p>
 
                     <div class="high-low">
                         <a><span id = 'dayonemax'>20</span>&deg;</a>
@@ -150,10 +159,10 @@
                 </div>
 
                 <div class= "fivedays" id="daytwo">
-                    <p><span id = "daytwodate">02</span></p>
-                    <img id = "daytwoimg" src="./images/icons/sunny.png" alt="">
+                    <p><span id="daytwodate">Sat, 4 Dec</span></p>
+                    <img id = "daytwoimg" src="./images/icons/sunny.webp" alt="">
 
-                    <p class="description" id="daytwodesc"></p>
+                    <p class="description" id="daytwodesc">clear sky</p>
                 
                     <div class="high-low">
                         <a><span id = 'daytwomax'>20</span>&deg;</a>
@@ -162,11 +171,11 @@
                 </div>
 
                 <div class= "fivedays" id="daythree">
-                    <p><span  id = "daythreedate">03</span></p>
-                    <img  id = "daythreeimg" src="./images/icons/sunny.png" alt="">
+                    <p><span id="daythreedate">Sun, 5 Dec</span></p>
+                    <img  id = "daythreeimg" src="./images/icons/sunny.webp" alt="">
 
 
-                    <p class="description" id="daythreedesc"></p>
+                    <p class="description" id="daythreedesc">clear sky</p>
 
                     <div class="high-low">
                         <a><span  id = 'daythreemax'>20</span>&deg;</a>
@@ -175,10 +184,10 @@
                 </div>
 
                 <div class= "fivedays" id="dayfour">
-                    <p><span  id = "dayfourdate">04</span></p>
-                    <img  id = "dayfourimg" src="./images/icons/sunny.png" alt="">
+                    <p><span id="dayfourdate">Mon, 6 Dec</span></p>
+                    <img  id = "dayfourimg" src="./images/icons/sunny.webp" alt="">
 
-                    <p class="description" id="dayfourdesc"></p>
+                    <p class="description" id="dayfourdesc">light rain</p>
 
                     <div class="high-low">
                         <a><span  id = 'dayfourmax'>20</span>&deg;</a>
@@ -187,10 +196,10 @@
                 </div>
 
                 <div class= "fivedays" id="dayfive">
-                    <p><span  id = "dayfivedate">05</span></p>
-                    <img  id = "dayfiveimg" src="./images/icons/sunny.png" alt="">
+                    <p><span id="dayfivedate">Tue, 7 Dec</span></p>
+                    <img  id = "dayfiveimg" src="./images/icons/sunny.webp" alt="">
 
-                    <p class="description" id="dayfivedesc"></p>
+                    <p class="description" id="dayfivedesc">clear sky</p>
 
                     <div class="high-low">
                         <a><span  id = 'dayfivemax'>20</span>&deg;</a>

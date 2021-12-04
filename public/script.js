@@ -247,19 +247,19 @@ function updateallinformation(data){
     // Update weather icon
     document.getElementById("dayoneimg").src = `./images/icons/${imagecode(
         oneday.weather[0].main
-    )}.png`;
+    )}.webp`;
     document.getElementById("daytwoimg").src = `./images/icons/${imagecode(
         twoday.weather[0].main
-    )}.png`;
+    )}.webp`;
     document.getElementById("daythreeimg").src = `./images/icons/${imagecode(
         threeday.weather[0].main
-    )}.png`;
+    )}.webp`;
     document.getElementById("dayfourimg").src = `./images/icons/${imagecode(
         fourday.weather[0].main
-    )}.png`;
+    )}.webp`;
     document.getElementById("dayfiveimg").src = `./images/icons/${imagecode(
         fiveday.weather[0].main
-    )}.png`;
+    )}.webp`;
 
     // Update weather description
     document.getElementById("dayonedesc").textContent =
@@ -281,7 +281,7 @@ function updateallinformation(data){
         "html"
     ).style.backgroundImage = `url("images/bg/${imagecode(
         today.weather[0].main
-    )}.jpg")`;
+    )}.webp")`;
 
 }
 
