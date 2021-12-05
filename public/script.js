@@ -26,7 +26,7 @@ function autocomplete(inp) {
 
         suggestiondata = await axios.post("/locationsuggestion", { val });
         const sug = suggestiondata.data;
-        console.log(sug);
+        // console.log(sug);
         arr = sug.dname;
         dlat = sug.dlat;
         dlon = sug.dlon;
@@ -120,7 +120,7 @@ const getWeatherinfo = async (event) => {
     const name = elem.namedItem("myInput").value;
     const lattitude = elem.lattitude.value;
     const longitude = elem.longitude.value;
-    console.log(lattitude, longitude);
+    // console.log(lattitude, longitude);
     const weatherdata = await axios.post("/weatherinfo", {
         lattitude,
         longitude,

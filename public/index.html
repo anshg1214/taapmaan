@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Taapmaan</title>
-
+    <!-- Meta Data -->
     <meta name="title" content = "Taapmaan">
     <meta name="description" content="Request Weather Information of any location">
     <meta name="keywords" content="Taapmaan, weather, weather info, Ansh, Goyal, Ansh Goyal">
@@ -12,16 +12,13 @@
     <meta name="language" content="English">
     <meta name="author" content="Ansh Goyal">
 
-    <link rel="stylesheet" href="style.css">
-
     <!-- External fonts and links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="./SAMAN___.ttf" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> -->
     <script src="https://kit.fontawesome.com/b512533c2e.js" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!-- Favicon -->
@@ -34,6 +31,15 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="./images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MV1YWJNGCM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MV1YWJNGCM');
+    </script>
 
 </head>
 <body>
@@ -86,7 +92,7 @@
         <div class="max-width">
 
             <div class="logo">
-                <a href="#">taapmaan</a>
+                <p href="#">taapmaan</p>
             </div>
 
             <div class="location">
@@ -113,7 +119,7 @@
             <div class="current-content">
 
                 <div class="currenttemp">
-                    <a><span id = 'currenttemp1'>30</span><sup id = "degree">&deg;</sup></a>
+                    <p id = 'currenttemp1'>30<sup id = "degree">&deg;</sup></p>
                 </div>
 
                 <div class="mainhead">
@@ -153,8 +159,8 @@
                     <p class="description" id="dayonedesc">broken clouds</p>
 
                     <div class="high-low">
-                        <a><span id = 'dayonemax'>20</span>&deg;</a>
-                        <a><span id = 'dayonemin'>10</span>&deg;</a>
+                        <p><span id = 'dayonemax'>20</span>&deg;</p>
+                        <p><span id = 'dayonemin'>10</span>&deg;</p>
                     </div>
                 </div>
 
@@ -165,8 +171,8 @@
                     <p class="description" id="daytwodesc">clear sky</p>
                 
                     <div class="high-low">
-                        <a><span id = 'daytwomax'>20</span>&deg;</a>
-                        <a><span id = 'daytwomin'>10</span>&deg;</a>
+                        <p><span id = 'daytwomax'>20</span>&deg;</p>
+                        <p><span id = 'daytwomin'>10</span>&deg;</p>
                     </div>
                 </div>
 
@@ -178,8 +184,8 @@
                     <p class="description" id="daythreedesc">clear sky</p>
 
                     <div class="high-low">
-                        <a><span  id = 'daythreemax'>20</span>&deg;</a>
-                        <a><span  id = 'daythreemin'>10</span>&deg;</a>
+                        <p><span  id = 'daythreemax'>20</span>&deg;</p>
+                        <p><span  id = 'daythreemin'>10</span>&deg;</p>
                     </div>
                 </div>
 
@@ -190,8 +196,8 @@
                     <p class="description" id="dayfourdesc">light rain</p>
 
                     <div class="high-low">
-                        <a><span  id = 'dayfourmax'>20</span>&deg;</a>
-                        <a><span  id = 'dayfourmin'>10</span>&deg;</a>
+                        <p><span  id = 'dayfourmax'>20</span>&deg;</p>
+                        <p><span  id = 'dayfourmin'>10</span>&deg;</p>
                     </div>
                 </div>
 
@@ -202,8 +208,8 @@
                     <p class="description" id="dayfivedesc">clear sky</p>
 
                     <div class="high-low">
-                        <a><span  id = 'dayfivemax'>20</span>&deg;</a>
-                        <a><span  id = 'dayfivemin'>10</span>&deg;</a>
+                        <p><span  id = 'dayfivemax'>20</span>&deg;</p>
+                        <p><span  id = 'dayfivemin'>10</span>&deg;</p>
                     </div>
                 </div>
 

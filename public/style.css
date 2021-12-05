@@ -1,6 +1,7 @@
 @font-face {
     font-family: "samarkan";
-    src: url("./SAMAN___.ttf"),"Arial";
+    src: url("./SAMAN___.ttf");
+    font-display: swap;
 }
 @font-face {
     font-family: 'Montserrat';
@@ -232,8 +233,8 @@ hr {
     justify-content: space-around;
 }
 
-.navbar .logo a {
-    font-family: "samarkan", Arial, Helvetica, sans-serif;
+.navbar .logo p {
+    font-family: "samarkan";
     font-size: 50px;
     font-weight: 600;
     color: white;
@@ -411,7 +412,7 @@ input[type="submit"]:hover {
     justify-content: space-around;
 }
 
-.forecast .max-width .forecast-content .fivedays .high-low a {
+.forecast .max-width .forecast-content .fivedays .high-low p {
     margin: 0 10px;
     font-size: 20px;
 }
