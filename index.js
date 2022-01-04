@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const path = require('path')
@@ -51,12 +52,12 @@ app.post("/locationsuggestion", async (req, res) => {
     return res.send(result);
 
 });
-const API_KEY = "5a5eacd3783a1ae3219045fedf1f3da8"
+
 app.post('/weatherinfo', async (req, res) => {
     const elem = req.body;
     const lat = elem.lattitude;
     const lon = elem.longitude;
-    const weatherdata = await getWeather(lat, lon, API_KEY);
+    const weatherdata = await getWeather(lat, lon, process.env.API_KEY);
     const data = weatherdata.data;
     return res.send(data);
 });
