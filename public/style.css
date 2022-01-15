@@ -256,6 +256,36 @@ hr {
     color: white;
 }
 
+#currentlocationicon{
+    padding: 6px;
+    font-size: 28px;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    backdrop-filter: blur(10px);
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
+    border: none;
+    cursor: pointer;
+    
+}
+#currentlocationicon:hover{
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+/* .navbar .currentlocation{
+    padding: 8px;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    backdrop-filter: blur(10px);
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
+} */
+
+
 /* Search Bar */
 
 .autocomplete {
@@ -449,6 +479,10 @@ input[type="submit"]:hover {
     .current .max-width .current-content .otherinfo div{
         backdrop-filter: blur(8px);
 
+    }
+
+    #formloc{
+        text-align: center;
     }
 
 }

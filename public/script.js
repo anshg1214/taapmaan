@@ -3,9 +3,10 @@ const axios = window.axios;
 const lattitude = document.getElementById("lattitude");
 const longitude = document.getElementById("longitude");
 const button = document.getElementById("submitButton");
-const preloader = document.querySelector('.precontainer');
+const preloader = document.querySelector(".precontainer");
+const currentlocation = document.querySelector("#currentlocationicon");
 
-const delay = ms => new Promise(res => setTimeout(res, ms));
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
 function autocomplete(inp) {
     var currentFocus;
@@ -113,7 +114,7 @@ autocomplete(document.getElementById("myInput"));
 const getWeatherinfo = async (event) => {
     disableButton();
     // preloader.addEventListener("load", preload(preloader));
-    preload(preloader);
+    preload(preloader, 2000);
 
     event.preventDefault();
     const elem = event.target.elements;
@@ -173,21 +174,20 @@ function imagecode(code) {
     }
 }
 
-function preload(loader){
+function preload(loader, time) {
     loader.style.display = "block";
-    setTimeout(function(){ loader.style.display = "none"; }, 2000);
+    setTimeout(function () {
+        loader.style.display = "none";
+    }, time);
 }
 
-function updateallinformation(data){
-
+function updateallinformation(data) {
     const today = data.current;
     oneday = data.daily[0];
     twoday = data.daily[1];
     threeday = data.daily[2];
     fourday = data.daily[3];
     fiveday = data.daily[4];
-
-
 
     document.getElementById("currenttemp1").textContent = Math.round(
         today.temp
@@ -282,15 +282,17 @@ function updateallinformation(data){
     ).style.backgroundImage = `url("images/bg/${imagecode(
         today.weather[0].main
     )}.webp")`;
-
 }
 
-async function firstload () {
+async function firstload() {
+    preloader.addEventListener("load", preload(preloader, 3000));
+    const ipinfo = await axios.get("/iplocation");
 
-    preloader.addEventListener("load", preload(preloader));
+    const lattitude = ipinfo.data.latitude;
+    const longitude = ipinfo.data.longitude;
+    const city = ipinfo.data.city;
 
-    const lattitude = 28.6517178;
-    const longitude = 77.2219388;
+    document.getElementById("placeloc").textContent = city;
 
     const weatherdata = await axios.post("/weatherinfo", {
         lattitude,
@@ -298,8 +300,23 @@ async function firstload () {
     });
     const data = weatherdata.data;
     updateallinformation(data);
-
 }
 
 // firstload();
+const getcurrentlocation = async () => {
+    preload(preloader, 2000);
+    const ipinfo = await axios.get("/iplocation");
 
+    const lattitude = ipinfo.data.latitude;
+    const longitude = ipinfo.data.longitude;
+    const city = ipinfo.data.city;
+
+    document.getElementById("placeloc").textContent = city;
+
+    const weatherdata = await axios.post("/weatherinfo", {
+        lattitude,
+        longitude,
+    });
+    const data = weatherdata.data;
+    updateallinformation(data);
+};

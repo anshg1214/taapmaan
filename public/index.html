@@ -4,7 +4,7 @@
     <title>Taapmaan</title>
     <!-- Meta Data -->
     <meta name="title" content = "Taapmaan">
-    <meta name="description" content="Request Weather Information of any location">
+    <meta name="description" content="Get Taapmaan of any place">
     <meta name="keywords" content="Taapmaan, weather, weather info, Ansh, Goyal, Ansh Goyal">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -17,6 +17,7 @@
     <link rel="preload" href="./SAMAN___.ttf" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b512533c2e.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -99,8 +100,13 @@
                 <i class="fas fa-map-marker-alt"></i>
                 <a href="#"><span id = 'placeloc'>New Delhi</span></a>
             </div>
+            
+            <div class="currentlocation">
+                <button id = "currentlocationicon" class="material-icons-outlined" onclick="getcurrentlocation()">my_location</button>
+            </div>
 
-            <form autocomplete="off" onsubmit="getWeatherinfo(event)">
+
+            <form autocomplete="off" onsubmit="getWeatherinfo(event)" id= "formloc">
                 <div class="autocomplete" style="width:300px;">
                   <input id="myInput" type="text" name="cityname" placeholder="Enter City" required>
                 </div>
